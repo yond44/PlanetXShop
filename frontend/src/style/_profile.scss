@@ -1,0 +1,20 @@
+@mixin profile($colorBackground) {
+    width: 90%;
+    padding-bottom: 40%;
+    margin: 10% auto;
+    box-shadow: 30px 22px 36px -18px rgba(0, 0, 0, 0.54);
+    -webkit-box-shadow: 30px 22px 36px -18px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 30px 22px 36px -18px rgba(0, 0, 0, 0.54);
+    color: #e1eef1;
+    background-color: $colorBackground;
+    
+    .profileHeader {
+        color: #e1eef1;
+        font-size: 40px;
+        padding-left: 20px;
+    }
+
+    .profileContent {
+        padding-left: 20px;
+    }
+}
