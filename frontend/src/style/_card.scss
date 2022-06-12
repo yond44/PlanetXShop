@@ -1,0 +1,7 @@
+@mixin cardProduct($colorBackground) {
+    box-shadow: 30px 22px 36px -18px rgba(0, 0, 0, 0.54);
+    -webkit-box-shadow: 30px 22px 36px -18px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 30px 22px 36px -18px rgba(0, 0, 0, 0.54);
+    color: #e1eef1;
+    background-color: $colorBackground;
+}

@@ -1,0 +1,33 @@
+@import './profile';
+@import './component-card';
+@import './Button';
+@import './card';
+@import './bg';
+$headerColor: #021605;
+
+.submit-btn {
+    @include btn(rgb(0, 132, 255))
+}
+.card-login {
+    @include card(rgba(24, 23, 23, 0.63));
+}
+
+.card-register {
+    @include card(rgba(24, 23, 23, 0.63));
+}
+
+.profile {
+    @include profile(rgba(24, 23, 23, 0.733))
+}
+
+.profile-btn {
+    @include btn (rgb(11, 2, 131))
+}
+
+.card-product {
+    @include cardProduct (#212529)
+}
+
+.Home-color {
+    @include bgColor(#18083d34);
+}
