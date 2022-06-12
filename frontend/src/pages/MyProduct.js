@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Table, Button } from "react-bootstrap"
 import axios from 'axios'
-import jwt_decode from 'jwt-decode'
+
 import AddProductModal from '../component/modal/add-product-modal'
 import EditProductModal from '../component/modal/edit-product-modal'
 import swal from 'sweetalert';
@@ -12,12 +12,12 @@ function MyProduct() {
 
     const [dataAllProducts, setDataAllProducts] = useState([]);
     const [dataEditProduct, setDataEditProduct] = useState({})
-    const [isLoading, setIsLoading] = useState(false);
+  
     const [refresh, setRefresh] = useState(false);
     const [show, setShow] = useState(false);
     const [showEdit, setShowEdit] = useState(false)
 
-    const [username, setUserName] = useState("");
+ 
     const [token, setToken] = useState("");
 
 
@@ -27,19 +27,19 @@ function MyProduct() {
         try {
             const response = await axios.get('http://localhost:8000/token');
             setToken(response.data.accessToken);
-            const decoded = jwt_decode(response.data.accessToken);
-            setUserName(decoded.username);
+           
+           
         } catch (error) {
             console.log(error);
         }
     }
 
     const fetchAllProducts = async (token) => {
-        await setIsLoading(true);
+   
         await GetMyProducts(token)
             .then((response) => setDataAllProducts(response.data))
             .catch((error) => console.log(error));
-        await setIsLoading(false);
+    
     };
 
   

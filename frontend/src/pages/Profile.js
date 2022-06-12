@@ -130,7 +130,7 @@ function ProfileCard() {
                     <Button className="profile-btn my-3" onClick={() => {
                             deleteACC()
                         }}>
-                            Delete All 
+                            Delete Account 
                         </Button>
                 </div>
 

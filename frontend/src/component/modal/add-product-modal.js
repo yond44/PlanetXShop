@@ -1,9 +1,7 @@
 
 import { Modal, Form, Button } from "react-bootstrap";
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import jwt_decode from 'jwt-decode'
 import { AddProduct } from "../../service/service";
 
 const AddProductModal = (props) => {
@@ -13,9 +11,9 @@ const AddProductModal = (props) => {
     const [quantity, setQuantity] = useState("");
     const [image, setImage] = useState("");
 
-    const navigate = useNavigate()
 
-    const [username, setUserName] = useState("");
+
+  
     const [token, setToken] = useState("");
   
 
@@ -26,8 +24,7 @@ const AddProductModal = (props) => {
         try {
             const response = await axios.get('http://localhost:8000/token');
             setToken(response.data.accessToken);
-            const decoded = jwt_decode(response.data.accessToken);
-            setUserName(decoded.username);
+
         } catch (error) {
             console.log(error);
         }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Container, CarouselItem } from 'react-bootstrap';
+import { Carousel, Container } from 'react-bootstrap';
 import bs from '../../img/Bigsale.webp'
 import cb from '../../img/cashback.jpg'
 import discount from '../../img/Discount.jpg'

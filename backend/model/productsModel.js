@@ -13,7 +13,7 @@ const products = db.define('products', {
         type: DataTypes.STRING
     },
     quantity:{
-        type: DataTypes.INTEGER
+        type: DataTypes.BIGINT
     },
     price:{
         type: DataTypes.BIGINT

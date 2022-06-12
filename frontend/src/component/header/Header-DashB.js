@@ -16,22 +16,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Logout = async (e) => {
 
-    const navigate = useNavigate()
-
-
-    e.preventDefault();
-    try {
-        await axios.delete('http://localhost:8000/logout')
-        navigate('/')
-    } catch (error) {
-        if (error.response) {
-            console.log(error.response.data);
-        }
-
-    }
-}
 
 function HeaderDashB() {
     const navigate = useNavigate()

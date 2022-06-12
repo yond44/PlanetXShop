@@ -12,17 +12,18 @@ const DetailProduct = () => {
     const [isLoading, setIsLoading] = useState(false);
     const { id } = useParams();
 
-    const fetchProductById = async () => {
+ 
+
+    useEffect(() => {
+           const fetchProductById = async () => {
         await setIsLoading(true);
         await getProductById(id)
             .then((response) => setDataProduct(response.data))
             .catch((error) => console.log(error));
         await setIsLoading(false);
     };
-
-    useEffect(() => {
         fetchProductById();
-    }, []);
+    }, [id]);
 
     return (
         <div>

@@ -3,7 +3,7 @@ import { Modal, Form, Button } from "react-bootstrap";
 import { updateProduct } from '../../service/service';
 
 import axios from 'axios'
-import jwt_decode from 'jwt-decode'
+
 
 const EditProductModal = (props) => {
     const { showEdit, handleCloseEdit, setRefresh, refresh, dataEditProduct } =
@@ -15,7 +15,7 @@ const EditProductModal = (props) => {
     const [image, setImage] = useState("");
 
 
-    const [username, setUserName] = useState("");
+ 
     const [token, setToken] = useState("");
   
 
@@ -26,8 +26,7 @@ const EditProductModal = (props) => {
         try {
             const response = await axios.get('http://localhost:8000/token');
             setToken(response.data.accessToken);
-            const decoded = jwt_decode(response.data.accessToken);
-            setUserName(decoded.username);
+
         } catch (error) {
             console.log(error);
         }
@@ -49,7 +48,7 @@ const EditProductModal = (props) => {
         setPrice(dataEditProduct.price);
         setQuantity(dataEditProduct.quantity);
         setImage(dataEditProduct.image);
-    }, [dataEditProduct.id]);
+    }, [dataEditProduct.id, dataEditProduct.name, dataEditProduct.price, dataEditProduct.quantity, dataEditProduct.image]);
 
     return (
         <Modal show={showEdit} onHide={handleCloseEdit}>

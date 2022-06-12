@@ -54,10 +54,10 @@ function ChangePassword() {
                     <Form  className="card-content">
                         <Form.Label htmlFor="username">Old Password</Form.Label>
                         <Form.Control
-                            type="text"
-                            id="name"
+                            type="password"
+                            id="oldPassword"
                             value={oldPassword}
-                            placeholder='Input username'
+                            placeholder='Input old password'
                             onChange={(e) => setOldPassword(e.target.value)}
                             style={{ width: "80%" }}
                         />
@@ -65,7 +65,7 @@ function ChangePassword() {
                         <Form.Control
                             type="password"
                             id="password"
-                            placeholder='Input password'
+                            placeholder='Input new password'
                             value={newPassword}
                             onChange={(e) => setNewPassword(e.target.value)}
                             style={{ width: "80%" }}
